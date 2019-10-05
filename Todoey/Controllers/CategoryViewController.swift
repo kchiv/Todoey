@@ -39,6 +39,13 @@ class CategoryViewController: UITableViewController {
     
     //MARK: - Data Manipulation Methods
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        //saveItems()
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     //MARK: - Add New Categories
 
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
