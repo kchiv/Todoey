@@ -39,6 +39,8 @@ class CategoryViewController: UITableViewController {
     
     //MARK: - Data Manipulation Methods
     
+    //MARK: - TableView Delegate Methods
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         //saveItems()
@@ -49,9 +51,42 @@ class CategoryViewController: UITableViewController {
     //MARK: - Add New Categories
 
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
+        
+        var textField = UITextField()
+        
+        let alert = UIAlertController(title: "Add New Todoey Category", message: "", preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: "Add Category", style: .default) { (action) in
+            //what will happen once the user clicks the Add Item button on our UIAlert
+            
+            let newCategory = Category(context: self.context)
+            newCategory.name = textField.text!
+            
+            self.categoryArray.append(newCategory)
+            
+            self.saveCategory()
+        }
+        
+        alert.addTextField { (alertTextField) in
+            alertTextField.placeholder = "Create New Category"
+            textField = alertTextField
+        }
+        
+        alert.addAction(action)
+        
+        present(alert, animated: true, completion: nil)
     }
     
-    //MARK: - TableView Delegate Methods
+    func saveCategory() {
+        
+        do {
+            try context.save()
+        } catch {
+            print("Error saving context \(error)")
+        }
+        
+        self.tableView.reloadData()
+    }
     
     func loadItems(with request: NSFetchRequest<Category> = Category.fetchRequest()) {
         do {
