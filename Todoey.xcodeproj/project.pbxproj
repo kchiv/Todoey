@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		034AD306232B5AD800B331E8 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 034AD304232B5AD800B331E8 /* DataModel.xcdatamodeld */; };
+		03738C982353B08D005A70F5 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03738C972353B08D005A70F5 /* Item.swift */; };
+		03738C9A2353B0A5005A70F5 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03738C992353B0A5005A70F5 /* Category.swift */; };
 		03976AFD2344703D0096E902 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03976AFC2344703D0096E902 /* CategoryViewController.swift */; };
 		03F40E9B2319E78D001523C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F40E9A2319E78D001523C6 /* AppDelegate.swift */; };
 		03F40E9D2319E78D001523C6 /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F40E9C2319E78D001523C6 /* TodoListViewController.swift */; };
@@ -19,7 +20,8 @@
 
 /* Begin PBXFileReference section */
 		028DCAF0E7CB0683932996E0 /* Pods_Todoey.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Todoey.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		034AD305232B5AD800B331E8 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		03738C972353B08D005A70F5 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		03738C992353B0A5005A70F5 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		03976AFC2344703D0096E902 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		03F40E972319E78D001523C6 /* Todoey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todoey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03F40E9A2319E78D001523C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -104,7 +106,8 @@
 		03F40EAE23246EBB001523C6 /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
-				034AD304232B5AD800B331E8 /* DataModel.xcdatamodeld */,
+				03738C992353B0A5005A70F5 /* Category.swift */,
+				03738C972353B08D005A70F5 /* Item.swift */,
 			);
 			path = "Data Model";
 			sourceTree = "<group>";
@@ -115,7 +118,6 @@
 				BBD23F591EDA07806FF9F331 /* Pods-Todoey.debug.xcconfig */,
 				F4F07CC7571CEBF77A6803FB /* Pods-Todoey.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -242,10 +244,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03738C982353B08D005A70F5 /* Item.swift in Sources */,
 				03976AFD2344703D0096E902 /* CategoryViewController.swift in Sources */,
 				03F40E9D2319E78D001523C6 /* TodoListViewController.swift in Sources */,
-				034AD306232B5AD800B331E8 /* DataModel.xcdatamodeld in Sources */,
 				03F40E9B2319E78D001523C6 /* AppDelegate.swift in Sources */,
+				03738C9A2353B0A5005A70F5 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,19 +450,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		034AD304232B5AD800B331E8 /* DataModel.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				034AD305232B5AD800B331E8 /* DataModel.xcdatamodel */,
-			);
-			currentVersion = 034AD305232B5AD800B331E8 /* DataModel.xcdatamodel */;
-			path = DataModel.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 03F40E8F2319E78D001523C6 /* Project object */;
 }
