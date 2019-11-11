@@ -29,18 +29,7 @@ class SwipeTableViewController: UITableViewController, SwipeTableViewCellDelegat
         let deleteAction = SwipeAction(style: .destructive, title: "Delete") { action, indexPath in
             // handle action by updating model with deletion
             
-            print("Delete Cell")
-            
-//            if let categoryForDeletion = self.categories?[indexPath.row] {
-//                do {
-//                    try self.realm.write {
-//                        self.realm.delete(categoryForDeletion)
-//                    }
-//                } catch {
-//                    print("Error deleting category, \(error)")
-//                }
-//
-//            }
+            self.updateModel(at: indexPath)
             
         }
 
@@ -54,6 +43,10 @@ class SwipeTableViewController: UITableViewController, SwipeTableViewCellDelegat
         var options = SwipeOptions()
         options.expansionStyle = .destructive
         return options
+    }
+    
+    func updateModel(at indexPath: IndexPath) {
+        // Update our data model.
     }
 
 }
